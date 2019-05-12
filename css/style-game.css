@@ -1,0 +1,50 @@
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(#5aafd7,#fff);
+    background-blend-mode: luminosity;
+    background-position: top left;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.image-background {
+    position: absolute;
+    bottom: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: 200px;
+    background: transparent repeat-x bottom left/auto;
+    background-image: url(../img/village-day.png);
+    z-index: -1;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.main {
+    margin: auto;
+    width: 98%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 2px solid rgb(1, 255, 35);
+    background-color: rgba(25, 53, 31,0.1);
+}
+
+.side {
+    width: 18%;
+    height: 90%;
+    background-color:#bdc5ff;
+}
+
+.chat {
+    width: 60%;
+    height: 90%;
+    margin: 0 2%;
+    background-color:#ffcabc;
+}

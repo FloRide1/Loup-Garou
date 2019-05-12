@@ -1,0 +1,128 @@
+* {
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+body {
+    background-color : rgb(34,44,86);
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    min-height: 975px;
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    
+}
+
+h2 {
+    font-family: Montserrat,sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 2px 2px rgba(0,0,0,.2);
+    letter-spacing: 2px;
+    color: #ffffff;
+    
+}
+
+.header {
+    border: 2px solid rgb(65, 9, 9);
+    background-color: rgb(137,43,50);
+    border-radius: 14px;
+    width: 10em;
+    height: 4em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    padding: 1.7em;
+    margin: 0;
+}
+
+.content {
+    border: 2px solid rgb(65, 9, 9);
+    background-color: rgb(137,43,50);
+    border-radius: 14px;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    
+
+}
+
+.content h2 {
+    text-align: center;
+    background-color: rgba(255,255,255,.2);
+    width: 30%;
+    padding: 5px;
+    height: 28px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+    background-image: url("../img/noise.png");
+    background-blend-mode: luminosity;
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+
+.content-div{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.noise {
+    background-image: url("../img/noise.png");
+    background-blend-mode: luminosity;
+    background-repeat: repeat;
+    background-position: top left;
+}
+
+
+.configuration div{
+    width: 75%;
+    border: 2px solid #d3a81b; 
+    background-color: #ffefbc!important;
+    border-radius: 14px;
+    align-items: flex-start;
+    padding: 2em;
+}
+
+
+.composition .compo-big-box {
+    width: 75%;
+    border: 2px solid #d3a81b; 
+    background-color: #ffefbc!important;
+    border-radius: 14px;
+    padding: 0 2em;
+}
+
+.compo-big-box h3 {
+    font-family: Montserrat,sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 0 2px 2px rgba(0,0,0,.2);
+    letter-spacing: 2px;
+    padding: 0.7em 1.7em;
+    border : 1px solid black;
+    border-radius: 14px;
+    background-color : rgba(0,0,0,.2);;
+    margin: 0.5em 0;
+    text-align: center;
+    width: 30%;
+}
+
+.compo-img {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.compo-img img {
+    margin: 10px;
+}
