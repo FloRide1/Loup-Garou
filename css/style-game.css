@@ -1,3 +1,6 @@
+body::-webkit-scrollbar {
+    display: none;
+}
 .background {
     position: absolute;
     height: 100%;
@@ -18,10 +21,6 @@
     background: transparent repeat-x bottom left/auto;
     background-image: url(../img/village-day.png);
     z-index: -1;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 .main {
@@ -95,7 +94,7 @@
     color: #ffffff;
 }
 
-.player {
+.player{
     margin-top: 10px;
     text-align: center;
     font-family: Montserrat,sans-serif;
@@ -107,7 +106,7 @@
 }
 
 .cards-img {
-    width: 40%;
+    width: 30%;
     height: auto;
     border: 3px solid rgb(65, 9, 9);
     border-radius: 14px;
@@ -118,3 +117,31 @@
     height: auto;
 }
 
+.player-list {
+    width: 100%;
+    min-height: 45vh;
+    margin: 10px 0;
+    border: solid rgb(65, 9, 9);
+    background-color: rgb(119, 17, 17);
+    border-width: 2px 0;
+    align-content: center;
+
+}
+
+.player-list p {
+    min-height: 45vh;
+    overflow-y: scroll;
+    font-weight: 50;
+    text-transform: none;
+    text-shadow: 0 2px 2px rgba(0,0,0,.2);
+    letter-spacing: 0;
+    color: #ffffff;
+}
+
+.player-list br {
+    line-height: 150%;
+}
+
+.player-list span {
+    padding:10px 0;
+}
