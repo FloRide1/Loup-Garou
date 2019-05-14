@@ -1,6 +1,25 @@
 body::-webkit-scrollbar {
     display: none;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+   
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+  
 .background {
     position: absolute;
     height: 100%;
@@ -26,29 +45,31 @@ body::-webkit-scrollbar {
 .main {
     margin: auto;
     width: 98%;
-    height: 100vh;
+    height: 90vh;
+    padding-top: 3%;
     display: flex;
     justify-content: center;
-    align-items: center;
     margin: auto;
 }
 
 .side {
     width: 18%;
-    height: 90%;
-    border: 2px solid rgb(65, 9, 9);
-    background-color: rgb(137,43,50);
-    border-radius: 14px;
     padding: 0;
 }
 
-.chat {
-    width: 60%;
-    height: 90%;
-    margin: 0 2%;
-    border: 2px solid #c7b887; 
-    background-color: #ffefbc!important;
+.side-back {
+    border: 2px solid rgb(65, 9, 9);
+    background-color: rgb(137,43,50);
     border-radius: 14px;
+}
+
+.chat {
+    position: relative;
+    width: 50%;
+    height: 90vh;
+    margin: 0 2%;
+    background-color: #eee;
+    border-radius: 5px;
 }
 
 .noise {
@@ -119,23 +140,27 @@ body::-webkit-scrollbar {
 
 .player-list {
     width: 100%;
-    min-height: 45vh;
     margin: 10px 0;
-    border: solid rgb(65, 9, 9);
-    background-color: rgb(119, 17, 17);
-    border-width: 2px 0;
-    align-content: center;
+    border-radius: 5px;
+    background-color: #795245;
+    
+}
 
+.background_playerlist {
+    background: transparent url(../img/background-players.png) center center/80% no-repeat;
+    max-height: calc(100% - 44px);
 }
 
 .player-list p {
-    min-height: 45vh;
+    padding-left: 15px;
+    margin-top: 10px;
     overflow-y: scroll;
     font-weight: 50;
     text-transform: none;
     text-shadow: 0 2px 2px rgba(0,0,0,.2);
     letter-spacing: 0;
     color: #ffffff;
+    font-family: Montserrat,sans-serif;
 }
 
 .player-list br {
@@ -144,4 +169,125 @@ body::-webkit-scrollbar {
 
 .player-list span {
     padding:10px 0;
+}
+
+
+.right-side {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.composition {
+    width: 100%;
+    background-color: #e6c585;
+    border-radius: 5px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+.all-role {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.role {
+    position: relative;
+}
+
+.role img {
+    width: 50px;
+    height: auto;
+    margin: 0 3px;
+}
+
+.role-amount{
+    position: absolute;
+    z-index: 1;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #fff;
+    top: 5px;
+    right: 5px;
+    transform: rotate3d(0,0,1,45deg);
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    transition: opacity .3s ease;
+}
+
+.role-amount span{
+    display: block;
+    font-family: 'Source Sans Pro',sans-serif;
+    transform: rotate3d(0,0,-1,45deg);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.block_header {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 0;
+    margin-bottom: 10px;
+    background-color: rgba(0,0,0,.2);
+    text-align: center;
+}
+
+.block_header h3 {
+    font-family: Montserrat,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 2px 2px rgba(0,0,0,.2);
+    letter-spacing: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+
+.background_composition{
+    background: transparent url(../img/background-compo.png) center bottom/100% no-repeat;
+} 
+
+.panel-footer {
+    position: absolute;
+    bottom : 0;
+    display: flex;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 0 0 5px 5px;
+}
+
+.chat input {
+    width: 80%;
+    border:0;
+    border-right: 1px solid grey;
+    height: 40px;
+    color: #222;
+    font-size: 13px;
+    padding-left: 4px;
+    padding-right: 6px;
+    padding-bottom: 0px;
+    background-color: inherit;
+    margin: 0;
+    border-radius: 0 0 0 5px;
+}
+
+.chat button {
+    width: 20%;
+    height: 40px;
+    border: 0;
+    color: #222;
+    font-size: 13px;
+    background-color: inherit;
+    margin: auto;
+    border-radius: 0 0 5px 0;
+    
 }
