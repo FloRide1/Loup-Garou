@@ -60,7 +60,7 @@ body::-webkit-scrollbar {
 .side-back {
     border: 2px solid rgb(65, 9, 9);
     background-color: rgb(137,43,50);
-    border-radius: 14px;
+    border-radius: 5px;
 }
 
 .chat {
@@ -70,6 +70,18 @@ body::-webkit-scrollbar {
     margin: 0 2%;
     background-color: #eee;
     border-radius: 5px;
+}
+
+.chat p {
+    width: 98%;
+    font-family: Montserrat,sans-serif;
+    margin-left: 10px;
+    overflow-y: scroll;
+    height: 90%;
+}
+
+.chat br {
+    line-height: 170%;
 }
 
 .noise {
@@ -97,11 +109,12 @@ body::-webkit-scrollbar {
 }
 
 .time {
-    width: 100%;
     border: solid rgb(65, 9, 9);
     background-color: rgb(119, 17, 17);
-    border-width: 2px 0;
+    border-width: 2px;
     text-align: center;
+    border-radius:  0 0 5px 5px;
+    padding: 0;
 }
 
 .time h3 {
@@ -290,4 +303,43 @@ h3 {
     margin: auto;
     border-radius: 0 0 5px 0;
     
+}
+
+.left-side {
+    border-bottom-width: 1px;
+    border-radius: 5px 5px 0 0;
+}
+
+.action-up {
+    background-color: #5e1717;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.action {
+    width: 100%;
+    background-color: rgba(255,255,255,.1);
+    text-align: center;
+}
+
+.action button {
+    min-height: 40px;
+    padding: 11px 20px;
+    box-shadow: inset 0 2px 2px rgba(255,255,255,.2), inset 0 -2px 2px rgba(0,0,0,.5);
+    border: 0;
+    background-color: #982626;
+    font-family: Montserrat,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 0 2px 2px rgba(0,0,0,.2);
+    letter-spacing: 2px;
+    color: #fff;
+    border-radius: 5px;
+    background-image: url("../img/noise.png");
+    background-blend-mode: luminosity;
+    background-repeat: repeat;
+    background-position: top left;
+    margin-bottom: 10px;
+
 }
