@@ -122,7 +122,7 @@ $(".valider").click(function() {
     number = window.location.href.split("/").slice(-1)[0]
     Num = updateTotal();
     Name = $('.text-name').val();
-    if (Name == "" or Name == undefined) {
+    if (Name == "" && Name == undefined) {
         Name = "Anonyme"
     };
     socket.emit("create-game",[Name,0,Num,"Public",Total,number,0])    
