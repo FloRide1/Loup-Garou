@@ -1,0 +1,24 @@
+{
+  "name": "loup-garou",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FloRide1/Loup-Garou.git"
+  },
+  "author": "FloRide",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FloRide1/Loup-Garou/issues"
+  },
+  "homepage": "https://github.com/FloRide1/Loup-Garou#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "socket.io": "^2.2.0"
+  }
+}

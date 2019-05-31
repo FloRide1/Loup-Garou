@@ -3,31 +3,32 @@
     <head>
         <title>Lg</title>
         <link rel="stylesheet" href="css/style-index.css">
+        <meta name="viewport" content="width=device-width">
     </head>
     <body>
         <div class="main">
             <div class="header noise"><h2>Partie :</h2></div>
             <div class="content noise">
-                <div>
+                <div class="part1">
                     <h3>Partie 1</h3>
-                        <p>Créateur : </p>
-                        <p>0 / 20</p>
-                        <p>Privée</p>
-                        <button>Rejoindre</button>
+                        <p>Partie Libre</p>
+                        <button id="create1">Créer une Partie</button>
                 </div>
-                <div> 
+                <div class="part2"> 
                     <h3>Partie 2</h3>
-                        <p>Créateur : </p>
-                        <p>0 / 20</p>
-                        <p>Public</p>
-                        <button>Rejoindre</button>
+                        <p>Partie Libre</p>
+                        <button id="create2">Créer une Partie</button>
                 </div>
-                <div>
+                <div class="part3">
                     <h3>Partie 3</h3>
                         <p>Partie Libre</p>
-                        <button>Créer une Partie</button>
+                        <button id="create3">Créer une Partie</button>
                 </div>
             </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

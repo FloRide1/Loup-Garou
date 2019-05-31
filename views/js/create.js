@@ -1,5 +1,7 @@
 Total = [["SimpleVillageois",1],["Loup-Garou",1]]
 
+const socket = io();
+
 $(".img-box").click(function() {
     if (!$(this).hasClass("select")) {
         if (!$(this).hasClass("selected")) {
@@ -9,7 +11,21 @@ $(".img-box").click(function() {
                 text = "Loup-Garou Blanc";
             };
             textid = text.replace(/\s/g, '');
-            rolenumber = 1;
+            
+            switch (textid) {
+                case "Soeurs":
+                    rolenumber = 2;
+                    break;
+                case "Frères":
+                    rolenumber = 3;
+                    break;
+                case "Voleur":
+                    rolenumber = -2;
+                    break;
+                default:
+                    rolenumber = 1;
+                    break;
+            }
             $(".para").append("<span id=\""+textid+"\">"+text+" : "+rolenumber+"<br/></span>");
             Total.push([textid,rolenumber]);
         } else {
@@ -98,4 +114,16 @@ updateTotal = function(){
         Num += Total[i][1];
     };
     $(".total").children("span").replaceWith("<span>Total : "+Num+"</span>");
+    return Num
 };
+
+
+$(".valider").click(function() {
+    number = window.location.href.split("/").slice(-1)[0]
+    Num = updateTotal();
+    socket.emit("create-game",["FloRide",0,Num,"Public",Total,number,0])
+});
+
+socket.on("join-game",function(num){
+    window.location.href = "http://localhost:8080/Partie/"+num+"&host=true&num="+num;
+})

@@ -1,3 +1,9 @@
+@media (max-width: 800px) {
+    .content{
+        flex-direction: column;
+    }
+}
+
 * {
     font-family: 'Source Sans Pro',sans-serif;
 }
@@ -17,9 +23,8 @@ body {
 }
 
 .header {
-    border: 2px solid rgb(65, 9, 9);
     background-color: rgb(137,43,50);
-    border-radius: 14px;
+    border-radius: 5px;
     width: 10em;
     height: 4em;
     text-align: center;
@@ -42,25 +47,26 @@ body {
     padding: 4% 0;
     height: auto;
     width: 100%;
-    border: 2px solid #d3a81b; 
     background-color: #ffefbc!important;
-    border-radius: 14px;
+    border-radius: 5px;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
 }
 
 .content div {
     
-    width: 20%;
-    height: 20em;
-    border: 2px solid rgb(65, 9, 9);
+    width: 250px;
+    height: 250px;
     background-color: rgb(137,43,50);
-    border-radius: 14px;
+    border-radius: 5px;
     background-image: url("../img/noise.png");
     background-blend-mode: luminosity;
     background-repeat: repeat;
     background-position: top left;
-    padding-top: 5%;
+    padding-top: 30px;
+    margin-bottom: 20px;
     text-align: center;
     color : #ffffff;
 }
@@ -68,9 +74,10 @@ body {
 
 .content button {
     color : #ffffff;
-    border: 2px solid rgb(12, 0, 0);
+    border: 0;
+    padding: 6px;
     background-color: rgb(68, 15, 19);
-    border-radius: 14px;
+    border-radius: 5px;
     background-image: url("../img/noise.png");
     background-blend-mode: luminosity;
     background-repeat: repeat;
@@ -88,11 +95,3 @@ body {
     background-position: top left;
 }
 
-@media (max-width: 800px) {
-    .main {
-        flex-flow: row wrap;
-    }
-    .content{
-        flex-direction: column;
-    }
-}
