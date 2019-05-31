@@ -125,5 +125,5 @@ $(".valider").click(function() {
 });
 
 socket.on("join-game",function(num){
-    window.location.href = "http://51.77.147.106/Partie/"+num+"&host=true&num="+num;
+    window.location.href = window.location.origin+"/Partie/"+num+"&host=true&num="+num;
 })

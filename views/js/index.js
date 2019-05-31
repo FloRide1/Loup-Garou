@@ -20,11 +20,11 @@ socket.on("index-list",function(listPart){
 });
 
 socket.on("create-game",function(num){
-    window.location.href = "http://51.77.147.106/create/"+num;
+    window.location.href = window.location.origin+"/create/"+num;
 })
 
 socket.on("join-game",function(num){
-    window.location.href = "http://51.77.147.106/Partie/"+num+"&num="+num;
+    window.location.href = window.location.origin+"/Partie/"+num+"&num="+num;
 })
 
 

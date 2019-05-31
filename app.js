@@ -47,6 +47,7 @@ io.on("connection",function(socket){
     socket.on("create-game",function(GameN){
         index = GameN[5];
         Game[index-1] = GameN;
+        socket.broadcast.emit("index-list",Game);
         socket.emit("join-game",index);
     })
 
@@ -58,14 +59,23 @@ io.on("connection",function(socket){
         creatorid = Game[index-1][6]
         Tableau = Game[index-1][4]
         var ind = Math.floor(Math.random() * Tableau.length);
-        card = Tableau[ind][0]
-        console.log(card)
-        if (Tableau[ind][1] > 1) {
-            Tableau[ind][1]--
+        if (Tableau[ind] == undefined) {
+            card = "SimpleVillageois";
+            Game[index-1][1]++
+            Game[index-1][2]++
         } else {
-            Tableau.splice(ind,1)
+            card = Tableau[ind][0];
+            Game[index-1][1]++
+            console.log(username+" : "+card)
+            if (Tableau[ind][1] > 1) {
+                Tableau[ind][1]--
+            } else {
+                Tableau.splice(ind,1)
+            };
         };
+        
         Game[index-1][4] = Tableau
+        socket.broadcast.emit("index-list",Game);
         socket.emit("acceptUsername",card);
         io.to(creatorid).emit("addUser",username,card);
     });
