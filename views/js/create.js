@@ -121,7 +121,11 @@ updateTotal = function(){
 $(".valider").click(function() {
     number = window.location.href.split("/").slice(-1)[0]
     Num = updateTotal();
-    socket.emit("create-game",["FloRide",0,Num,"Public",Total,number,0])
+    Name = $('.text-name').val();
+    if (Name == "" or Name == undefined) {
+        Name = "Anonyme"
+    };
+    socket.emit("create-game",[Name,0,Num,"Public",Total,number,0])    
 });
 
 socket.on("join-game",function(num){
