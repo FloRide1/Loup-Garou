@@ -119,6 +119,8 @@ h2 {
 .compo-img {
     display: flex;
     flex-flow: row wrap;
+    align-self: center;
+    
 }
 
 img {
@@ -153,6 +155,7 @@ img {
     text-align: center;
     padding: 7px 7px 14px 7px;
     margin: 7px;
+    margin-top: 18px;
     cursor: pointer;
     transition: background-color 0.5s;
 }
@@ -294,3 +297,12 @@ img {
     background-repeat: repeat;
     background-position: top left;
 }
+
+
+
+@media (max-width: 800px) {
+    .compo-img{
+        justify-content: center;
+    }
+}
+

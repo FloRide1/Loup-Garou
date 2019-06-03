@@ -68,13 +68,14 @@ io.on("connection",function(socket){
             Game[index-1][1]++
             console.log(username+" : "+card)
             if (Tableau[ind][1] > 1) {
-                Tableau[ind][1]--
+                Tableau[ind][1]--;
             } else {
                 Tableau.splice(ind,1)
             };
         };
         
         Game[index-1][4] = Tableau
+        Game[index-1][7].push([]);
         socket.broadcast.emit("index-list",Game);
         socket.emit("acceptUsername",card);
         io.to(creatorid).emit("addUser",username,card);

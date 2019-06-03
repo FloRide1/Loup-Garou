@@ -96,6 +96,18 @@ function giveimgName(img) {
         case "Marionettiste":
             Name = "marionnetiste.png"
             break;
+        case "Servante":
+            Name = "servante.png"
+            break;
+        case "Gentleman":
+            Name = "gentleman.png"
+            break;
+        case "FilsdelaLune":
+            Name = "moonson.png"
+            break;
+        case "Joker":
+            Name = "joker.png"
+            break;
         case "Loup-Garou":
             Name = "wolf.png"
             break;
@@ -114,6 +126,15 @@ function giveimgName(img) {
         case "Chien-Loup":
             Name = "wolfdog.png"
             break;
+        case "Loup-Rouge":
+            Name = "redwolf.png"
+            break;
+        case "Loup-Bleue":
+            Name = "bluewolf.png"
+            break;
+        case "Loup-Violet":
+            Name = "purplewolf.png"
+            break;
         case "Voleur":
             Name = "voleur.png"
             break;
@@ -125,6 +146,18 @@ function giveimgName(img) {
             break;
         case "Lapin":
             Name = "rabbit.png"
+            break;
+        case "AbominableSectaire":
+            Name = "sectaire.png"
+            break;
+        case "ArnaCoeur":
+            Name = "arnacoeur.png"
+            break;
+        case "Detective":
+            Name = "detective.jpg"
+            break;
+        case "Avocat":
+            Name = "avocat.png"
             break;
             
     

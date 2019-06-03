@@ -125,7 +125,7 @@ $(".valider").click(function() {
     if (Name == "" && Name == undefined) {
         Name = "Anonyme"
     };
-    socket.emit("create-game",[Name,0,Num,"Public",Total,number,0])    
+    socket.emit("create-game",[Name,0,Num,"Public",Total,number,0,[]])    
 });
 
 socket.on("join-game",function(num){
