@@ -19,3 +19,5 @@ git clone https://github.com/FloRide1/Loup-Garou.git
 cd Loup-Garou && npm install 
 node app.js
 ```
+Licence:
+GNU 3
