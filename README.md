@@ -14,6 +14,8 @@ because it's just an card selector now.
 ## How to Install it
 Download this repo and launch it with npm
 
+## Todo 
+- [ ] Remake from scratch
 ```sh
 git clone https://github.com/FloRide1/Loup-Garou.git
 cd Loup-Garou && npm install 
